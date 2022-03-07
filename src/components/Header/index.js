@@ -17,42 +17,45 @@ export const AppHeader = () => {
       type: ACTIONS.CURRENCY_SELECTED,
       payload: {
         currency: e.target.value,
-        symbol: e.target.value === "GBR" ? "£" : "$",
+        symbol: e.target.value === "GBP" ? "£" : "$",
       },
     });
   };
+
   return (
-    <AppBar position="static" color="transparent">
-      <Container>
-        <Toolbar>
-          <Typography
-            sx={{
-              flex: 1,
-              color: "gold",
-              fontWeight: "bold",
-              cursor: "pointer",
-            }}
-            variant="h4"
-            component="div"
-          >
-            CRYPTO-TRACKER
-          </Typography>
-          <Select
-            value={state.currency}
-            onChange={updateCurrency}
-            variant="filled"
-            sx={{
-              width: 100,
-              height: 40,
-              marginLeft: 15,
-              border: "1px solid white",
-            }}
-          >
-            <MenuItem value={"GBR"}>GBR</MenuItem>
-            <MenuItem value={"USD"}>USD</MenuItem>
-          </Select>
-        </Toolbar>
-      </Container>
-    </AppBar>
+    <Box sx={{ flexGrow: 1 }}>
+      <AppBar position="static" color="transparent">
+        <Container>
+          <Toolbar>
+            <Typography
+              sx={{
+                flex: 1,
+                color: "gold",
+                fontWeight: "bold",
+                cursor: "pointer",
+              }}
+              variant="h4"
+              component="div"
+            >
+              CRYPTO-TRACKER
+            </Typography>
+            <Select
+              value={state.currency}
+              onChange={updateCurrency}
+              variant="filled"
+              sx={{
+                width: 100,
+                height: 40,
+                marginLeft: 15,
+                border: "1px solid white",
+              }}
+            >
+              <MenuItem value={"GBP"}>GBR</MenuItem>
+              <MenuItem value={"USD"}>USD</MenuItem>
+            </Select>
+          </Toolbar>
+        </Container>
+      </AppBar>
+    </Box>
   );
 };

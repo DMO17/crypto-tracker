@@ -3,7 +3,7 @@ import React, { useReducer } from "react";
 export const CryptoContext = React.createContext();
 
 const initialState = {
-  currency: "GBR",
+  currency: "GBP",
   currencySymbol: "£",
 };
 
