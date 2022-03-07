@@ -5,9 +5,5 @@ import { Banner } from "../components/Banner";
 import "../index.css";
 
 export const Home = () => {
-  return (
-    <Container>
-      <Banner />
-    </Container>
-  );
+  return <Banner />;
 };
