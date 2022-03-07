@@ -9,13 +9,14 @@ export const Banner = () => {
   return (
     <Box
       sx={{
-        backgroundImage:
-          "url(https://github.com/piyush-eon/react-crypto-tracker/blob/master/public/banner2.jpg?raw=true)",
+        marginTop: 5,
+        backgroundColor: "#e9bcb7",
+        backgroundImage: "linear-gradient(315deg, #e9bcb7 0%, #29524a 74%)",
       }}
     >
       <Container
         sx={{
-          height: 500,
+          height: 400,
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-around",
@@ -35,16 +36,16 @@ export const Banner = () => {
           </Typography>
 
           <Typography
-            sx={{ marginTop: "40px" }}
+            sx={{ marginTop: "40px", marginBottom: "40px" }}
             align="center"
-            variant="subtitle2"
+            variant="subtitle1"
             component="div"
           >
             Get all the info regarding your favourite Crypto Currency
           </Typography>
-        </Box>
 
-        <Carousel />
+          <Carousel />
+        </Box>
       </Container>
     </Box>
   );
