@@ -1,15 +1,16 @@
 import { BrowserRouter } from "react-router-dom";
 import { AppRouter } from "./AppRouter";
 import { AppHeader } from "./components/Header";
+import { CryptoProvider } from "./contexts/CryptoProvider";
 
 function App() {
   return (
-    <div>
-      <AppHeader />
+    <CryptoProvider>
       <BrowserRouter>
+        <AppHeader />
         <AppRouter />
       </BrowserRouter>
-    </div>
+    </CryptoProvider>
   );
 }
 
