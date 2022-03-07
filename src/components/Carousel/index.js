@@ -72,9 +72,9 @@ export const Carousel = () => {
   return (
     <Box
       sx={{
-        height: "20%",
+        height: "10%",
         display: "flex",
-        alightItems: "center",
+        justifyContent: "center",
       }}
     >
       <AliceCarousel

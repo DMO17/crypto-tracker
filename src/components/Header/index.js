@@ -8,6 +8,7 @@ import Container from "@mui/material/Container";
 import Select from "@mui/material/Select";
 import MenuItem from "@mui/material/MenuItem";
 import { useCryptoContextValues } from "../../hooks";
+import { Link } from "react-router-dom";
 
 export const AppHeader = () => {
   const { state, dispatch, ACTIONS } = useCryptoContextValues();
@@ -27,18 +28,15 @@ export const AppHeader = () => {
       <AppBar position="static" color="transparent">
         <Container>
           <Toolbar>
-            <Typography
-              sx={{
-                flex: 1,
-                color: "gold",
-                fontWeight: "bold",
-                cursor: "pointer",
-              }}
-              variant="h4"
-              component="div"
+            <Link
+              to={"/"}
+              style={{ flex: 1, fontWeight: "bold", cursor: "pointer" }}
             >
-              CRYPTO-TRACKER
-            </Typography>
+              <Typography variant="h4" component="div">
+                CRYPTO-TRACKER
+              </Typography>
+            </Link>
+
             <Select
               value={state.currency}
               onChange={updateCurrency}
