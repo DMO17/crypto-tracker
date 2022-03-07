@@ -40,8 +40,6 @@ export const CoinsTable = () => {
     );
   };
 
-  console.log(handleUserSearch("eth"), "eroubguerbg");
-
   useEffect(() => {
     fetchCoinsList();
   }, [state.currency]);
@@ -73,7 +71,7 @@ export const CoinsTable = () => {
                       fontFamily: "Montserrat",
                     }}
                     key={head}
-                    align={head === "Coin" ? "" : "right"}
+                    align={head === "Coin" ? "left" : "right"}
                   >
                     {head}
                   </TableCell>
@@ -86,9 +84,7 @@ export const CoinsTable = () => {
                 const profit = row.price_change_percentage_24h > 0;
                 return (
                   <TableRow
-                    onClick={() =>
-                      navigate(`/coins/${row.id}`, { replace: true })
-                    }
+                    onClick={() => navigate(`/${row.id}`, { replace: true })}
                     key={index}
                   >
                     <TableCell
@@ -115,7 +111,7 @@ export const CoinsTable = () => {
                         >
                           {row.symbol}
                         </span>
-                        <span style={{ color: "darkgrey" }}>{row.name}</span>
+                        <span style={{ color: "darkGrey" }}>{row.name}</span>
                       </div>
                     </TableCell>
                     <TableCell align="right">

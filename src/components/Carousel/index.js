@@ -58,8 +58,6 @@ export const Carousel = () => {
   const { state } = useCryptoContextValues();
   const [trendingCoins, setTrendingCoins] = useState([]);
 
-  console.log(trendingCoins);
-
   const fetchTrendingCoins = async () => {
     const { data } = await axios.get(TrendingCoins(state.currency));
     setTrendingCoins(data);
